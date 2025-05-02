@@ -1,7 +1,6 @@
 <?php
 
+use App\Http\Controllers\FinancialYear;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [FinancialYear::class, 'index'])->name('index');
